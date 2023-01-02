@@ -1,7 +1,9 @@
 .scroll-discover {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  font-size: xx-large;
-  /* text-align: center; */
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  font-size: 10em;
+  white-space: pre-wrap;
+  text-align: center;
 }
