@@ -2,8 +2,7 @@
   position: absolute;
   left: 0%;
   right: 0%;
-  margin: auto;
-  font-size: 10em;
+  font-size: clamp(4rem, 9vw, 8vmax);
   white-space: pre-wrap;
   text-align: center;
 }

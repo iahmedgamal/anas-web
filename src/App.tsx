@@ -7,12 +7,13 @@ import { ScrollDiscover } from "./components/scrollDiscover";
 // Define the parent component that will contain the three section components
 const App = () => {
   const [currentSection, setCurrentSection] = useState(1);
-
+  const [showText, setShowText] = useState(true);
   // Method to handle scroll events and switch between sections
   const handleScroll = (event: { deltaY: number }) => {
     // Check if the user is scrolling up or down
     if (event.deltaY > 0) {
       // Scrolling down, switch to the next section or the first section if on the last one
+      setShowText(false);
       if (currentSection < 3) {
         setCurrentSection(currentSection + 1);
       } else {
@@ -41,7 +42,7 @@ const App = () => {
   return (
     <div className="app" onWheel={handleScroll}>
       {displayedSection}
-      <ScrollDiscover />
+      {showText && <ScrollDiscover />}
     </div>
   );
 };
