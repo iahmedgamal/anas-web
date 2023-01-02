@@ -4,7 +4,6 @@ import './Section1.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 export const Section1 = () => {
-
   useEffect(() => {
     AOS.init();
   }, []);
@@ -26,5 +25,3 @@ export const Section1 = () => {
     ></div>
   );
 };
-
-

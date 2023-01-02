@@ -1,0 +1,49 @@
+img {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin: 32px 8px;
+}
+.overlay {
+  height: 100%;
+  overflow: hidden;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 33, 33, 0.247);
+  overflow-x: hidden;
+  display: block;
+}
+
+.close {
+     display: none;
+}
+
+.overlay-content {
+  margin-top: 100px;
+}
+.vertical-line {
+  margin-top: 70px;
+  border-top: 1px solid #ffffffb4;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+  margin: 20px;
+  margin-left: 15px;
+  /* font-family: 'Poppins';
+  font-style: normal; */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.4;
+}
+
+.humbugger-menu {
+  cursor: pointer;
+}
+

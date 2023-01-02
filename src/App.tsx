@@ -3,15 +3,16 @@ import './App.css';
 import { Section1 } from './components/Section1/Section1';
 import { Section2 } from './components/Section2/Section2';
 import { Section3 } from './components/Section3/Section3';
+import { MainNavigation } from './components/MainNavigation/MainNavigation';
 
-// Define the parent component that will contain the three section components
-const App = () => {
+const App : React.FC = () => {
   const [currentSection, setCurrentSection] = useState(1);
+const [mainNavigation, setMainNavigation] = useState(false);
 
 
   // Method to handle scroll events and switch between sections
   const handleScroll = (event: { deltaY: number; }) => {
-
+    setMainNavigation(true)
     
     // Check if the user is scrolling up or down
     if (event.deltaY > 0) {
@@ -42,10 +43,8 @@ const App = () => {
   }
 
   return (
-    <div
-      className='app'
-      onWheel={handleScroll}
-    >
+    <div className='app' onWheel={handleScroll}>
+      <MainNavigation name={mainNavigation}></MainNavigation>
       {displayedSection}
     </div>
   );
