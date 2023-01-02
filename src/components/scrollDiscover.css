@@ -5,4 +5,18 @@
   font-size: clamp(4rem, 9vw, 8vmax);
   white-space: pre-wrap;
   text-align: center;
+  opacity: 0;
+  animation: text 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes text {
+  0% {
+    opacity: 0%;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 100%;
+  }
 }
