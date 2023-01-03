@@ -2,8 +2,9 @@
   position: absolute;
   left: 0%;
   right: 0%;
-  font-family: "Canela";
+  font-family: 'Canela';
   font-weight: 500;
+  color: whitesmoke;
   font-size: clamp(4rem, 9vw, 8vmax);
   white-space: pre-wrap;
   text-align: center;
