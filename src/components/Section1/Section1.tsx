@@ -25,5 +25,3 @@ export const Section1 = () => {
     ></div>
   );
 };
-
-
