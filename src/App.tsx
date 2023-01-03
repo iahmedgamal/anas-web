@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./App.css";
-import { Section1 } from "./components/Section1/Section1";
-import { Section2 } from "./components/Section2/Section2";
-import { Section3 } from "./components/Section3/Section3";
-import { ScrollDiscover } from "./components/scrollDiscover";
+import React, { useEffect, useRef, useState } from 'react';
+import './App.css';
+import { Section1 } from './components/Section1/Section1';
+import { Section2 } from './components/Section2/Section2';
+import { Section3 } from './components/Section3/Section3';
+import { ScrollDiscover } from './components/ScrollDiscover/ScrollDiscover';
 // Define the parent component that will contain the three section components
 const App = () => {
   const [currentSection, setCurrentSection] = useState(1);
