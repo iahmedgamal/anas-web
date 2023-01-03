@@ -19,7 +19,7 @@ img {
 }
 
 .close {
-     display: none;
+  display: none;
 }
 
 .overlay-content {
@@ -46,4 +46,3 @@ img {
 .humbugger-menu {
   cursor: pointer;
 }
-

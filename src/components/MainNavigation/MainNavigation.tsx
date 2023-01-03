@@ -66,7 +66,7 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({ name }) => {
   const renderProjects = () => {
     return projects.map((project) => {
       return (
-        <div className='vertical' key={project.id}>
+        <div className="vertical" key={project.id}>
           {project.name}
         </div>
       );
@@ -76,12 +76,12 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({ name }) => {
   return (
     <div>
       <div ref={navRef} className={`overlay ${toggle ? 'overlay' : 'close'}`}>
-        <div className='vertical-line'></div>
-        <div className='overlay-content'>{renderProjects()}</div>
+        <div className="vertical-line"></div>
+        <div className="overlay-content">{renderProjects()}</div>
       </div>
 
-      <span className='humbugger-menu' onClick={toggleNav}>
-        <img src={MenuLogo} alt='Menu Logo' />
+      <span className="humbugger-menu" onClick={toggleNav}>
+        <img src={MenuLogo} alt="Menu Logo" />
       </span>
     </div>
   );
