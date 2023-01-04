@@ -5,10 +5,18 @@ import { Section2 } from './components/Section2/Section2';
 import { Section3 } from './components/Section3/Section3';
 import { MainNavigation } from './components/MainNavigation/MainNavigation';
 import { ScrollDiscover } from './components/ScrollDiscover/ScrollDiscover';
+import { DetailsNavigation } from './components/DetailsNavigation/DetailsNavigation';
 const App: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(1);
   const [mainNavigation, setMainNavigation] = useState(false);
   const [showText, setShowText] = useState(true);
+  const [currentProject, setCurrentProject] = useState( {
+      name: 'Portraits',
+      id: 1,
+    });
+    const [toggleDetails, setToggleDetails] = useState(false);
+
+
   // Method to handle scroll events and switch between sections
   const handleScroll = (event: { deltaY: number }) => {
     setMainNavigation(true);
@@ -42,9 +50,20 @@ const App: React.FC = () => {
     displayedSection = <Section3 />;
   }
 
+  const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setToggleDetails(!toggleDetails);
+  }
+  
   return (
     <div className="app" onWheel={handleScroll}>
+      <button className="btn-open" onClick={discoverHandler}>
+        discover
+      </button>
       <MainNavigation name={mainNavigation}></MainNavigation>
+      <DetailsNavigation
+        toggle={toggleDetails}
+        project={currentProject}
+      ></DetailsNavigation>
       {displayedSection}
       {showText && <ScrollDiscover />}
     </div>

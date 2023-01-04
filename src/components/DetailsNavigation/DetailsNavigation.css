@@ -1,0 +1,17 @@
+
+.details-navigation {
+  height: 100%;
+  overflow: hidden;
+  width: 50%;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: #181A19;
+  overflow-x: hidden;
+  display: block;
+}
+
+.overlay-content {
+  margin-top: 100px;
+}
