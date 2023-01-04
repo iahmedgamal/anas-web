@@ -13,7 +13,7 @@ img {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(33, 33, 33, 0.247);
+  background-color: rgba(33, 33, 33, 0.500);
   overflow-x: hidden;
   display: block;
 }
@@ -34,13 +34,15 @@ img {
   writing-mode: vertical-rl;
   margin: 20px;
   margin-left: 15px;
-  /* font-family: 'Poppins';
-  font-style: normal; */
+  font-family: 'Poppins-Regular';
+  transform: rotate(0.5turn);
+  font-style: normal; 
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
   opacity: 0.4;
+  cursor: pointer;
 }
 
 .humbugger-menu {
