@@ -5,6 +5,8 @@ import { Section2 } from './components/Section2/Section2';
 import { Section3 } from './components/Section3/Section3';
 import { MainNavigation } from './components/MainNavigation/MainNavigation';
 import { ScrollDiscover } from './components/ScrollDiscover/ScrollDiscover';
+import { DiscoverButton } from './components/DiscoverButton/DiscoverButton';
+
 const App: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(1);
   const [mainNavigation, setMainNavigation] = useState(false);
@@ -47,6 +49,7 @@ const App: React.FC = () => {
       <MainNavigation name={mainNavigation}></MainNavigation>
       {displayedSection}
       {showText && <ScrollDiscover />}
+      <DiscoverButton handleClick={() => console.log('discover')} />
     </div>
   );
 };
