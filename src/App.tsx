@@ -61,9 +61,7 @@ const App: React.FC = () => {
   
   return (
     <div className="app" onWheel={handleScroll}>
-      <button className="btn-open" onClick={discoverHandler}>
-        discover
-      </button>
+
       <MainNavigation name={mainNavigation}></MainNavigation>
       <DetailsNavigation
         toggle={toggleDetails}
@@ -71,9 +69,7 @@ const App: React.FC = () => {
       ></DetailsNavigation>
       {displayedSection}
       {showText && <ScrollDiscover />}
-      {!showText && (
-        <DiscoverButton handleClick={() => console.log('discover')} />
-      )}
+      {!showText && <DiscoverButton handleClick={discoverHandler} />}
     </div>
   );
 };
