@@ -10,10 +10,13 @@ const App: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(1);
   const [mainNavigation, setMainNavigation] = useState(false);
   const [showText, setShowText] = useState(true);
-  const [currentProject, setCurrentProject] = useState( {
-      name: 'Portraits',
-      id: 1,
-    });
+  const [currentProject, setCurrentProject] = useState({
+    name: 'Portraits',
+    id: 1,
+    time: 'April, 2020',
+    description:
+      'Bordering Sudan from the northen side, the city of Halayeb has\n its own distincive cultute and language; Shot digitally, this \n project primarily aims to capture the soul of the city and \n documents an annual camel trading event secondarily.',
+  });
     const [toggleDetails, setToggleDetails] = useState(false);
 
 

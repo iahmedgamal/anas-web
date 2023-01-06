@@ -32,7 +32,14 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
             data-aos="slide-right"
             data-aos-delay="100"
           >
-            <div className="overlay-content">{project.name}</div>
+            <div className="details-content">
+              <div className="details-time">{project.time}</div>
+              <div className="details-title">{project.name}</div>
+              <div className="divider" />
+              <div className="details-description">
+                {project.description}
+              </div>
+            </div>
           </div>
         </>
       )}

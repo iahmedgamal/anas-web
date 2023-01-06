@@ -1,4 +1,3 @@
-
 .details-navigation {
   height: 100%;
   overflow: hidden;
@@ -7,11 +6,51 @@
   z-index: 4;
   top: 0;
   left: 0;
-  background-color: #181A19;
+  background-color: #181a19;
   overflow-x: hidden;
   display: block;
 }
 
-.overlay-content {
-  margin-top: 100px;
+.details-content {
+  font-family: 'Poppins-Regular';
+  margin-left: 90px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  width: 100%;
+  border-top: 1px solid #333;
+  margin-top: 35px;
+}
+
+.details-time {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #f3ebdc;
+}
+
+.details-title {
+  font-family: 'Canela';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 90px;
+  font-size: 5vw;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.details-description {
+  white-space: pre-line;
+  font-family: 'Poppins-Light';
+    font-weight: 300;
+
+  font-size: 20px;
+  line-height: 140%;
+  color: #ffffff;
+  margin-top: 16px;
 }

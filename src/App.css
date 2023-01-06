@@ -35,12 +35,13 @@ body {
 
 @font-face {
   font-family: 'Poppins-Regular';
-  src: local('Canela'),
+  src: local('Poppins-Regular'),
     url('./assets/fonts/Poppins-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Poppins-Light';
-  src: local('Canela'),
+  src: local('Poppins-Light'),
     url('./assets/fonts/Poppins-Light.woff2') format('woff2');
 }
+
