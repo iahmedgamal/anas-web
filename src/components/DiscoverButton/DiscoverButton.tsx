@@ -8,7 +8,7 @@ export const DiscoverButton = ({ handleClick }: Props) => {
   return (
     <div>
       <button className="discoverBtn" onClick={handleClick}>
-        discover
+        &#11177; discover
       </button>
     </div>
   );
