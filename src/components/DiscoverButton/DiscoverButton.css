@@ -2,10 +2,19 @@
   position: fixed;
   bottom: 5%;
   right: 5%;
+  width: 180px;
+  height: 60px;
   border-radius: 70%;
-  font-size: large;
-  font-family: 'Canela Bold';
+  font-size: 30px;
+  font-family: 'Canela Regular';
   color: white;
-  padding: 0.1em 1em;
-  background-color: rgb(49, 48, 48);
+  padding-top: 1px;
+  padding-bottom: 3px;
+  padding-right: 1px;
+  padding-left: 1px;
+  background-color: #181a19;
+}
+
+.arrow {
+  margin-right: 8px;
 }

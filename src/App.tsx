@@ -49,7 +49,9 @@ const App: React.FC = () => {
       <MainNavigation name={mainNavigation}></MainNavigation>
       {displayedSection}
       {showText && <ScrollDiscover />}
-      <DiscoverButton handleClick={() => console.log('discover')} />
+      {!showText && (
+        <DiscoverButton handleClick={() => console.log('discover')} />
+      )}
     </div>
   );
 };

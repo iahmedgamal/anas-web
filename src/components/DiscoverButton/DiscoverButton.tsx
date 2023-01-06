@@ -1,4 +1,5 @@
 import './DiscoverButton.css';
+import arrow from '../../assets/arrow.svg';
 
 type Props = {
   handleClick: React.MouseEventHandler<HTMLButtonElement>;
@@ -7,8 +8,9 @@ type Props = {
 export const DiscoverButton = ({ handleClick }: Props) => {
   return (
     <div>
-      <button className="discoverBtn" onClick={handleClick}>
-        &#11177; discover
+      <button onClick={handleClick} className="discoverBtn">
+        <img src={arrow} alt="arrow" className="arrow" />
+        discover
       </button>
     </div>
   );
