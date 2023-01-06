@@ -34,6 +34,16 @@ body {
 }
 
 @font-face {
+  font-family: 'Canela Bold';
+  src: url('./assets/fonts/Canela-Bold-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Canela Regular';
+  src: url('./assets/fonts/Canela-Regular.woff') format('woff');
+}
+
+@font-face {
   font-family: 'Poppins-Regular';
   src: local('Poppins-Regular'),
     url('./assets/fonts/Poppins-Regular.woff2') format('woff2');
