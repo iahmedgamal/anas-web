@@ -81,7 +81,7 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({ name }) => {
       </div>
 
       <span className="humbugger-menu" onClick={toggleNav}>
-        <img src={MenuLogo} alt="Menu Logo" />
+        <img src={MenuLogo} className="mainNavImg" alt="Menu Logo" />
       </span>
     </div>
   );
