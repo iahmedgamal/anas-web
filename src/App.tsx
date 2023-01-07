@@ -22,7 +22,7 @@ const App: React.FC = () => {
     if (event.deltaY > 0) {
       // Scrolling down, switch to the next section or the first section if on the last one
       setShowText(false);
-      if (currentSection < 3) {
+      if (currentSection < 6) {
         setCurrentSection(currentSection + 1);
       } else {
         setCurrentSection(1);
@@ -32,11 +32,14 @@ const App: React.FC = () => {
       if (currentSection > 1) {
         setCurrentSection(currentSection - 1);
       } else {
-        setCurrentSection(3);
+        setCurrentSection(6);
       }
     }
   };
 
+  const navigationClick = (e: any) => {
+    setCurrentSection(Number(e.target.id));
+  };
   // Render the currently displayed section based on the state
   let displayedSection;
   if (currentSection === 1) {
@@ -45,11 +48,17 @@ const App: React.FC = () => {
     displayedSection = <Section2 />;
   } else if (currentSection === 3) {
     displayedSection = <Section3 />;
+  } else if (currentSection === 4) {
+    displayedSection = <Section4 />;
+  } else if (currentSection === 5) {
+    displayedSection = <Section5 />;
+  } else if (currentSection === 6) {
+    displayedSection = <Section6 />;
   }
 
   return (
     <div className="app" onWheel={handleScroll}>
-      <MainNavigation name={mainNavigation}></MainNavigation>
+      <MainNavigation name={mainNavigation} handleClick={navigationClick} />
       {displayedSection}
       {showText && <ScrollDiscover />}
       {!showText && (

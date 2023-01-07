@@ -33,13 +33,14 @@
 
 .vertical {
   writing-mode: vertical-lr;
+  transform: rotate(-180deg);
   margin: 40px;
   margin-left: 15px;
   /* font-family: 'Poppins';
   font-style: normal; */
   font-weight: 400;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 30px;
   color: #ffffff;
   opacity: 0.4;
 }
