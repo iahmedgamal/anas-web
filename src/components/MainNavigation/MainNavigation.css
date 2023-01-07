@@ -42,21 +42,23 @@
   font-size: 16px;
   line-height: 30px;
   color: #ffffff;
-  opacity: 0.4;
 }
 
 .vertical a {
   color: whitesmoke;
+  opacity: 0.4;
   text-decoration: none;
 }
 
 .vertical a:hover {
-  color: red;
+  color: white;
+  opacity: 1;
 }
 
 .vertical a:focus {
-  color: red;
-  font-weight: bold;
+  color: white;
+  opacity: 1;
+  font-weight: 400;
 }
 
 .humbugger-menu {
