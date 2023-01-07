@@ -67,7 +67,7 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({ name }) => {
     return projects.map((project) => {
       return (
         <div className="vertical" key={project.id}>
-          {project.name}
+          <a href={`#${project.id}`}>{project.name}</a>
         </div>
       );
     });
