@@ -61,10 +61,10 @@ const App: React.FC = () => {
   
   return (
     <div className="app" onWheel={handleScroll}>
-
       <MainNavigation name={mainNavigation}></MainNavigation>
       <DetailsNavigation
         toggle={toggleDetails}
+        setToggleDetails={setToggleDetails}
         project={currentProject}
       ></DetailsNavigation>
       {displayedSection}

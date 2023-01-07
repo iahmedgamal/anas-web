@@ -40,7 +40,7 @@ body {
 
 @font-face {
   font-family: 'Canela Regular';
-  src: url('./assets/fonts/Canela-Regular.woff') format('woff');
+  src: url('./assets/fonts/Canela-Regular.woff2') format('woff2');
 }
 
 @font-face {

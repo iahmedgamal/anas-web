@@ -17,8 +17,44 @@
   margin-top: 200px;
   display: flex;
   flex-direction: column;
+  height: 75vh;
 }
 
+.buttons {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-family: 'Canela Regular';
+}
+.back-btn {
+  font-size: 20px;
+  color: white;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  flex-direction: column;
+  font-family: 'Canela Regular';
+}
+.back-icon {
+  margin: 8px;
+}
+.more-btn {
+  font-family: 'Canela Regular';
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 24px;
+  color: black;
+  background-color: white;
+  border-radius: 70%;
+  width: 116px;
+  height: 46px;
+  margin: 0px 40px 10px;
+}
 .divider {
   width: 100%;
   border-top: 1px solid #333;
@@ -47,8 +83,7 @@
 .details-description {
   white-space: pre-line;
   font-family: 'Poppins-Light';
-    font-weight: 300;
-
+  font-weight: 300;
   font-size: 20px;
   line-height: 140%;
   color: #ffffff;
