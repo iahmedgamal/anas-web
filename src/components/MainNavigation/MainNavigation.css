@@ -50,10 +50,11 @@
 }
 
 .vertical a:hover {
-  color: green;
+  color: red;
 }
 
-.vertical a:active {
+.vertical a:focus {
+  color: red;
   font-weight: bold;
 }
 
