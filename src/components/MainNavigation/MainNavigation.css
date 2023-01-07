@@ -32,7 +32,7 @@
 
 .vertical {
   writing-mode: vertical-rl;
-  margin: 20px;
+  margin: 40px;
   margin-left: 15px;
   font-family: 'Poppins-Regular';
   transform: rotate(0.5turn);
