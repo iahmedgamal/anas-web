@@ -8,12 +8,23 @@ import { Section5 } from './components/Section5/Section5';
 import { Section6 } from './components/Section6/Section6';
 import { MainNavigation } from './components/MainNavigation/MainNavigation';
 import { ScrollDiscover } from './components/ScrollDiscover/ScrollDiscover';
+import { DetailsNavigation } from './components/DetailsNavigation/DetailsNavigation';
 import { DiscoverButton } from './components/DiscoverButton/DiscoverButton';
 
 const App: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(1);
   const [mainNavigation, setMainNavigation] = useState(false);
   const [showText, setShowText] = useState(true);
+  const [currentProject, setCurrentProject] = useState({
+    name: 'Portraits',
+    id: 1,
+    time: 'April, 2020',
+    description:
+      'Bordering Sudan from the northen side, the city of Halayeb has\n its own distincive cultute and language; Shot digitally, this \n project primarily aims to capture the soul of the city and \n documents an annual camel trading event secondarily.',
+  });
+    const [toggleDetails, setToggleDetails] = useState(false);
+
+
   // Method to handle scroll events and switch between sections
   const handleScroll = (event: { deltaY: number }) => {
     setMainNavigation(true);
@@ -56,14 +67,21 @@ const App: React.FC = () => {
     displayedSection = <Section6 />;
   }
 
+  const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setToggleDetails(!toggleDetails);
+  }
+  
   return (
     <div className="app" onWheel={handleScroll}>
       <MainNavigation name={mainNavigation} handleClick={navigationClick} />
+      <DetailsNavigation
+        toggle={toggleDetails}
+        setToggleDetails={setToggleDetails}
+        project={currentProject}
+      ></DetailsNavigation>
       {displayedSection}
       {showText && <ScrollDiscover />}
-      {!showText && (
-        <DiscoverButton handleClick={() => console.log('discover')} />
-      )}
+      {!showText && <DiscoverButton handleClick={discoverHandler} />}
     </div>
   );
 };

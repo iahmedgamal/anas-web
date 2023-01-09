@@ -40,5 +40,18 @@ body {
 
 @font-face {
   font-family: 'Canela Regular';
-  src: url('./assets/fonts/Canela-Regular.woff') format('woff');
+  src: url('./assets/fonts/Canela-Regular.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: local('Poppins-Regular'),
+    url('./assets/fonts/Poppins-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins-Light';
+  src: local('Poppins-Light'),
+    url('./assets/fonts/Poppins-Light.woff2') format('woff2');
+}
+
