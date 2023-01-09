@@ -10,9 +10,9 @@ export const Section1 = () => {
 
   return (
     <div
-      data-aos='slide-up'
-      data-aos-anchor-placement='top-center'
-      data-aos-duration='600'
+      data-aos="slide-up"
+      data-aos-anchor-placement="top-center"
+      data-aos-duration="600"
       style={{
         backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/ds_6332.jpg?alt=media&token=cb76bf7c-8af5-45b3-bb8d-f65cff834125')`,
         backgroundRepeat: 'no-repeat',

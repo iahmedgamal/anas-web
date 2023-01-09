@@ -5,6 +5,7 @@
   left: 0;
   margin: 32px 8px;
 }
+
 .overlay {
   height: 100%;
   overflow: hidden;
@@ -31,7 +32,8 @@
 }
 
 .vertical {
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
   margin: 40px;
   margin-left: 15px;
   font-family: 'Poppins-Regular';
@@ -39,10 +41,25 @@
   font-style: normal; 
   font-weight: 400;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 30px;
   color: #ffffff;
+}
+
+.vertical a {
+  color: whitesmoke;
   opacity: 0.4;
-  cursor: pointer;
+  text-decoration: none;
+}
+
+.vertical a:hover {
+  color: white;
+  opacity: 1;
+}
+
+.vertical a:focus {
+  color: white;
+  opacity: 1;
+  font-weight: 400;
 }
 
 .humbugger-menu {
