@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-export const Section3 = () => {
+export const Section5 = () => {
   useEffect(() => {
     AOS.init();
   }, []);

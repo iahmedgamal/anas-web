@@ -9,9 +9,13 @@ import 'aos/dist/aos.css';
 interface MainNavigationProps {
   name: boolean;
   projectIndex?: number;
+  handleClick: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
-export const MainNavigation: React.FC<MainNavigationProps> = ({ name }) => {
+export const MainNavigation: React.FC<MainNavigationProps> = ({
+  name,
+  handleClick,
+}) => {
   const navRef = useRef<HTMLInputElement>(null);
   const [toggle, setToggle] = useState(false);
 
@@ -67,7 +71,13 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({ name }) => {
     return projects.map((project) => {
       return (
         <div className="vertical" key={project.id}>
-          {project.name}
+          <a
+            href={`#${project.name}`}
+            onClick={handleClick}
+            id={String(project.id)}
+          >
+            {project.name}
+          </a>
         </div>
       );
     });
