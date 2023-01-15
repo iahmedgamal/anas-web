@@ -29,9 +29,12 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
   
     const closeHandler = () => {
       setToggleDetails(false);
-       navigate('/project/1');
   };
   
+      const moreHandler = () => {
+        setToggleDetails(false);
+        navigate('/project/1');
+      };
 
   return (
     <div>
@@ -60,7 +63,7 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
                   />
                   Back
                 </button>
-                <button className="more-btn" onClick={closeHandler}>
+                <button className="more-btn" onClick={moreHandler}>
                   More
                 </button>
               </div>
