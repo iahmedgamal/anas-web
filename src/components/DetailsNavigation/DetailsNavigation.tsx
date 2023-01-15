@@ -5,6 +5,7 @@ import './DetailsNavigation.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Back from '../../assets/back.svg';
+import { useNavigate } from 'react-router-dom';
 
 interface DetailsNavigationProps {
   project: Project;
@@ -18,6 +19,7 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
   setToggleDetails,
 }) => {
   const navRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init();
@@ -27,7 +29,10 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
   
     const closeHandler = () => {
       setToggleDetails(false);
-    };
+       navigate('/project/1');
+  };
+  
+
   return (
     <div>
       {toggle && (
@@ -55,7 +60,9 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
                   />
                   Back
                 </button>
-                <button className="more-btn">More</button>
+                <button className="more-btn" onClick={closeHandler}>
+                  More
+                </button>
               </div>
             </div>
           </div>
