@@ -15,30 +15,9 @@ const App: React.FC = () => {
   const [currentProject, setCurrentProject] = useState(Projects);
 
   // Method to handle scroll events and switch between sections
-  const handleScroll = (event: { deltaY: number }) => {
+  const handleScroll = () => {
     setMainNavigation(true);
-
-    // Check if the user is scrolling up or down
-    if (event.deltaY > 0) {
-      // Scrolling down, switch to the next section or the first section if on the last one
-      setShowText(false);
-      if (currentSection < 6) {
-        setCurrentSection(currentSection + 1);
-      } else {
-        setCurrentSection(1);
-      }
-    } else {
-      // Scrolling up, switch to the previous section or the last section if on the first one
-      if (currentSection > 1) {
-        setCurrentSection(currentSection - 1);
-      } else {
-        setCurrentSection(6);
-      }
-    }
-  };
-
-  const navigationClick = (e: any) => {
-    setCurrentSection(Number(e.target.id));
+    setShowText(false);
   };
 
   const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -46,15 +25,14 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="app" onWheel={handleScroll}>
-      <MainNavigation name={mainNavigation} handleClick={navigationClick} />
+    <div className="app" onScroll={handleScroll}>
+      <MainNavigation name={mainNavigation} />
       <DetailsNavigation
         toggle={toggleDetails}
         setToggleDetails={setToggleDetails}
         project={Projects[0]}
       ></DetailsNavigation>
-      <Sections projects={Projects} />
-      {showText && <ScrollDiscover />}
+      <Sections projects={Projects} />;{showText && <ScrollDiscover />}
       {!showText && <DiscoverButton handleClick={discoverHandler} />}
     </div>
   );

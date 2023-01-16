@@ -1,30 +1,5 @@
 .app {
-  height: 100vh;
   width: 100%;
-  align-items: center;
-  display: flex;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: 'hidden';
-}
-
-.section {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: blanchedalmond;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: background-image 0.5s ease-in-out;
-}
-
-body {
-  overflow: hidden;
 }
 
 @font-face {
