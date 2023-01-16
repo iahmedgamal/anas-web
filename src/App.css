@@ -1,12 +1,14 @@
 .app {
   position: relative;
   width: 100%;
+  background-color: black;
 }
 html,
 body {
   height: 100%;
   margin: 0;
 }
+
 @font-face {
   font-family: 'Canela';
   src: local('Canela'),

@@ -1,7 +1,6 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import { MainNavigation } from './components/MainNavigation/MainNavigation';
-import { ScrollDiscover } from './components/ScrollDiscover/ScrollDiscover';
 import { DetailsNavigation } from './components/DetailsNavigation/DetailsNavigation';
 import { Sections } from './components/Sections/Sections';
 import { Projects } from './components/models/Projects';
@@ -29,7 +28,6 @@ const App: React.FC = () => {
         setToggleDetails={setToggleDetails}
         project={Projects[0]}
       ></DetailsNavigation>
-      <ScrollDiscover />
       <Sections projects={Projects} handleDiscover={discoverHandler} />
     </div>
   );
