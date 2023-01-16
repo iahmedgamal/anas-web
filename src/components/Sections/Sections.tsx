@@ -1,10 +1,16 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { Project } from '../models/Project';
 import './Sections.css';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
+import { Project } from '../models/Project';
+import { DiscoverButton } from '../DiscoverButton/DiscoverButton';
 
-export const Sections = ({ projects }) => {
+type Props = {
+  projects: Array<Project>;
+  handleDiscover: React.MouseEventHandler<HTMLButtonElement>;
+};
+
+export const Sections = ({ projects, handleDiscover }: Props) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -14,17 +20,19 @@ export const Sections = ({ projects }) => {
       {projects.map((project: Project) => {
         return (
           <div
-            data-aos="fade-up"
-            data-aos-offset="200"
+            data-aos="slide-up"
+            data-aos-offset="250"
             data-aos-delay="50"
-            data-aos-duration="1000"
+            data-aos-duration="600"
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
             data-aos-once="false"
             data-aos-anchor-placement="top-center"
             id={project.name}
+            key={project.id}
           >
             <img src={project.url} />
+            <DiscoverButton handleClick={handleDiscover} />
           </div>
         );
       })}

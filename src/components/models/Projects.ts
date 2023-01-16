@@ -24,7 +24,7 @@ export const Projects: Project[] = [
       'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/Bild053_Neg.Nr.29A-2.jpg?alt=media&token=f85b89c5-2bd1-4c1b-bb88-f90427e560c6',
     url: '',
   },
-  { name: 'Singles', id: 3, time: '', description: '', url: '' },
-  { name: 'Covid', id: 3, time: '', description: '', url: '' },
-  { name: 'Yemen', id: 3, time: '', description: '', url: '' },
+  { name: 'Singles', id: 4, time: '', description: '', url: '' },
+  { name: 'Covid', id: 5, time: '', description: '', url: '' },
+  { name: 'Yemen', id: 6, time: '', description: '', url: '' },
 ];
