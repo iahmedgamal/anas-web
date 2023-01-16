@@ -8,25 +8,14 @@ import { Projects } from './components/models/Projects';
 
 const App: React.FC = () => {
   const [mainNavigation, setMainNavigation] = useState(false);
-  const [showText, setShowText] = useState(true);
   const [toggleDetails, setToggleDetails] = useState(false);
-  const [currentProject, setCurrentProject] = useState(Projects);
 
   // Method to handle scroll events and switch between sections
   const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
     setMainNavigation(true);
-    setShowText(false);
     if (event.type === 'scroll')
       console.log(document.documentElement.scrollTop);
   };
-
-  useEffect(() => {
-    setShowText(false);
-
-    return () => {
-      setShowText(true);
-    };
-  }, []);
 
   const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
     setToggleDetails(!toggleDetails);

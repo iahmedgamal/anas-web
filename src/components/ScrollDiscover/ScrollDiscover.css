@@ -1,7 +1,9 @@
 .scroll-discover {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   left: 0%;
   right: 0%;
+  top: 40%;
   font-family: 'Canela';
   font-weight: 500;
   color: whitesmoke;
