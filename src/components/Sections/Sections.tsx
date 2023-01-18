@@ -44,7 +44,10 @@ export const Sections = ({ projects, handleDiscover }: Props) => {
             key={project.id}
           >
             <img src={project.url} />
-            <DiscoverButton handleClick={handleDiscover} />
+            <DiscoverButton
+              handleClick={handleDiscover}
+              id={String(project.id)}
+            />
           </div>
         );
       })}

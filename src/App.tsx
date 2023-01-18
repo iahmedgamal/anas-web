@@ -11,18 +11,15 @@ const App: React.FC = () => {
   const [currentProject, setCurrentProject] = useState(Projects[0]);
 
   const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setToggleDetails(!toggleDetails);
-  };
-
-  const detailsHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    const target = event.target as HTMLAnchorElement;
+    const target = event.target as HTMLButtonElement;
     const id = Number(target.id);
     setCurrentProject(Projects[id]);
+    setToggleDetails(!toggleDetails);
   };
 
   return (
     <div className="app">
-      <MainNavigation name={mainNavigation} clickHandler={detailsHandler} />
+      <MainNavigation name={mainNavigation} />
       <DetailsNavigation
         toggle={toggleDetails}
         setToggleDetails={setToggleDetails}
