@@ -56,7 +56,7 @@
   opacity: 1;
 }
 
-.vertical a:focus {
+.vertical a:visited {
   color: white;
   opacity: 1;
   font-weight: 400;

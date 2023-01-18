@@ -8,25 +8,25 @@ import { Projects } from './components/models/Projects';
 const App: React.FC = () => {
   const [mainNavigation, setMainNavigation] = useState(false);
   const [toggleDetails, setToggleDetails] = useState(false);
-
-  // Method to handle scroll events and switch between sections
-  const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
-    setMainNavigation(true);
-    if (event.type === 'scroll')
-      console.log(document.documentElement.scrollTop);
-  };
+  const [currentProject, setCurrentProject] = useState(Projects[0]);
 
   const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
     setToggleDetails(!toggleDetails);
   };
 
+  const detailsHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = event.target as HTMLAnchorElement;
+    const id = Number(target.id);
+    setCurrentProject(Projects[id]);
+  };
+
   return (
-    <div className="app" onScroll={handleScroll}>
-      <MainNavigation name={mainNavigation} />
+    <div className="app">
+      <MainNavigation name={mainNavigation} clickHandler={detailsHandler} />
       <DetailsNavigation
         toggle={toggleDetails}
         setToggleDetails={setToggleDetails}
-        project={Projects[0]}
+        project={currentProject}
       ></DetailsNavigation>
       <Sections projects={Projects} handleDiscover={discoverHandler} />
     </div>
