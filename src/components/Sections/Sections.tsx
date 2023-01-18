@@ -20,8 +20,8 @@ export const Sections = ({ projects, handleDiscover }: Props) => {
     <div className="section">
       <div
         data-aos="slide-up"
-        data-aos-offset="300"
-        data-aos-delay="200"
+        data-aos-offset="200"
+        data-aos-delay="100"
         data-aos-duration="600"
         data-aos-easing="ease-in-out"
         data-aos-anchor-placement="top-center"
