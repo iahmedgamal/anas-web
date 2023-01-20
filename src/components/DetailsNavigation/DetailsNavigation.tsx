@@ -1,4 +1,4 @@
-import React, {  useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Project } from '../models/Project';
 import './DetailsNavigation.css';
 // importing aos
@@ -19,22 +19,35 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
   setToggleDetails,
 }) => {
   const navRef = useRef<HTMLInputElement>(null);
+  const buttonRef = useRef<HTMLInputElement>(null);
+
   const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init();
   }, []);
 
- 
-  
-    const closeHandler = () => {
-      setToggleDetails(false);
+  useEffect(() => {
+    function handleClickOutside(event: any) {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        closeHandler();
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [navRef]);
+
+  const closeHandler = () => {
+    setToggleDetails(false);
   };
-  
-      const moreHandler = () => {
-        setToggleDetails(false);
-        navigate('/project/1');
-      };
+
+  const moreHandler = () => {
+    setToggleDetails(false);
+    navigate('/project/1');
+  };
 
   return (
     <div>
@@ -74,3 +87,6 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
     </div>
   );
 };
+function componentDidMount() {
+  throw new Error('Function not implemented.');
+}
