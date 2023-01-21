@@ -13,6 +13,7 @@ interface MainNavigationProps {
   name: boolean;
   projectIndex?: number;
   handleClick: React.MouseEventHandler<HTMLAnchorElement>;
+  // project:Project
 }
 
 export const ProjectPage: React.FC<MainNavigationProps> = ({
@@ -22,6 +23,18 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
   const navRef = useRef<HTMLInputElement>(null);
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
+  let [currentIndex, setCurrentIndex] = useState(0);
+
+  const project: Project = {
+    name: 'Portraits',
+    id: 1,
+    time: '2019',
+    description: 'test portrait',
+    gallery: [
+      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/D85_1193-2%201.png?alt=media&token=e2eece33-28a1-4f79-ace4-290d1fe8449e',
+      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/WhatsApp%20Image%202022-12-27%20at%2012.55.35.jpeg?alt=media&token=33fb159a-4d87-44bc-9c16-88897f151cb9',
+    ],
+  };
 
   useEffect(() => {
     AOS.init();
@@ -57,12 +70,17 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
   };
 
   const handlePreviousImage = (event: any) => {
-    console.log('Previous image');
+    setCurrentIndex(currentIndex - 1);
+    if (currentIndex <= 0) {
+      setCurrentIndex(project.gallery.length - 1);
+    }
   };
 
   const handleNextImage = (event: any) => {
-    console.log('Next image');
-    //TODO: handle next image handle
+    setCurrentIndex(currentIndex + 1);
+    if (currentIndex == project.gallery.length - 1) {
+      setCurrentIndex(0);
+    }
   };
 
   return (
@@ -72,7 +90,7 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
       data-aos-duration="600"
       style={{
         //TODO: change the background image by passing the project image
-        backgroundImage: `url('https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/ds_6332.jpg?alt=media&token=cb76bf7c-8af5-45b3-bb8d-f65cff834125')`,
+        backgroundImage: `url(${project.gallery[currentIndex]})`,
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
@@ -90,14 +108,15 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
               <HiArrowNarrowUp></HiArrowNarrowUp>{' '}
             </button>
 
-            <a>Project Name</a>
+            <a>{project.name}</a>
             <button onClick={handleNextImage}>
-              {' '}
               <HiArrowNarrowDown></HiArrowNarrowDown>{' '}
             </button>
 
             <br></br>
-            <a>1 / 10</a>
+            <a>
+              {currentIndex + 1} / {project.gallery.length}
+            </a>
           </div>
           <div>
             <div className="break-line"></div>

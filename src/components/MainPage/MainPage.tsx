@@ -24,6 +24,11 @@ const MainPage: React.FC = () => {
     time: 'April, 2020',
     description:
       'Bordering Sudan from the northen side, the city of Halayeb has\n its own distincive cultute and language; Shot digitally, this \n project primarily aims to capture the soul of the city and \n documents an annual camel trading event secondarily.',
+    gallery: [
+      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/D85_1193-2%201.png?alt=media&token=e2eece33-28a1-4f79-ace4-290d1fe8449e',
+      ,
+      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/WhatsApp%20Image%202022-12-27%20at%2012.55.35.jpeg?alt=media&token=33fb159a-4d87-44bc-9c16-88897f151cb9',
+    ],
   });
   const [toggleDetails, setToggleDetails] = useState(false);
 

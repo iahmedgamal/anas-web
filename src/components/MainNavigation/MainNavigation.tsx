@@ -25,36 +25,42 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({
       id: 1,
       time: '2019',
       description: 'test portrait',
+      gallery: ['', ''],
     },
     {
       name: 'Halayeb',
       id: 2,
       time: '2019',
       description: 'test portrait',
+      gallery: ['', ''],
     },
     {
       name: 'Frankfurt',
       id: 3,
       time: '2019',
       description: 'test portrait',
+      gallery: ['', ''],
     },
     {
       name: 'Singles',
       id: 4,
       time: '2019',
       description: 'test portrait',
+      gallery: ['', ''],
     },
     {
       name: 'COVID',
       id: 5,
       time: '2019',
       description: 'test portrait',
+      gallery: ['', ''],
     },
     {
       name: 'Yemen',
       id: 6,
       time: '2019',
       description: 'test portrait',
+      gallery: ['', ''],
     },
   ];
 
