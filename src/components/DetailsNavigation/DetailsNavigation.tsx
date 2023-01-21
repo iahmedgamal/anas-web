@@ -19,8 +19,6 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
   setToggleDetails,
 }) => {
   const navRef = useRef<HTMLInputElement>(null);
-  const buttonRef = useRef<HTMLInputElement>(null);
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -38,14 +36,14 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
       // Unbind the event listener on clean up
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [navRef]);
+  }, []);
 
   const closeHandler = () => {
     setToggleDetails(false);
   };
 
   const moreHandler = () => {
-    setToggleDetails(false);
+    setToggleDetails(!toggle);
     navigate('/project/1');
   };
 

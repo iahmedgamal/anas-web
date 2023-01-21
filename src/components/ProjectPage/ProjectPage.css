@@ -14,7 +14,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(33, 33, 33, 0.500);
+  background-color:#181A19;
   overflow-x: hidden;
   display: block;
 }
@@ -23,10 +23,29 @@
   display: none;
 }
 
-.overlay-content {
-  margin-top: 100px;
+.project-content {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  text-align: center;
+  flex: 1;
+  height: 100%;
 }
 
+.vertical-word {
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  margin: 20px;
+  margin-left: 15px;
+  font-family: 'Poppins-Regular';
+  transform: rotate(0.5turn);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+}
 .main-break-line {
   margin-top: 70px;
   border-top: 1px solid #ffffffb4;
@@ -37,34 +56,18 @@
   border-top: 1px solid #ffffffb4;
 }
 
-
-.vertical-word {
-  writing-mode: vertical-lr;
-  transform: rotate(-180deg);
-  margin: 40px;
-  margin-left: 15px;
-  font-family: 'Poppins-Regular';
-  transform: rotate(0.5turn);
-  font-style: normal; 
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
-  color: #ffffff;
-  height: 45vh;
-}
-
-.vertical-word  a {
+.vertical-word a {
   color: whitesmoke;
   opacity: 0.4;
   text-decoration: none;
 }
 
-.vertical-word  a:hover {
+.vertical-word a:hover {
   color: white;
   opacity: 1;
 }
 
-.vertical-word  a:focus {
+.vertical-word a:focus {
   color: white;
   opacity: 1;
   font-weight: 400;
@@ -73,7 +76,7 @@
 .btn-action {
   margin: 10px;
   font-family: 'Poppins-Regular';
-  font-style: normal; 
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
@@ -97,8 +100,14 @@
   font-weight: 400;
 }
 
-
 .humbugger-menu {
   cursor: pointer;
   z-index: 5;
+}
+
+button{
+  margin: 5px 0;
+  background: transparent;
+  color: #7A7F7D;
+  font-size: 22px;
 }

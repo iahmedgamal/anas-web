@@ -7,6 +7,8 @@ import { Project } from '../models/Project';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useNavigate } from 'react-router-dom';
+import { HiArrowNarrowUp } from 'react-icons/hi';
+import { HiArrowNarrowDown } from 'react-icons/hi';
 interface MainNavigationProps {
   name: boolean;
   projectIndex?: number;
@@ -54,6 +56,14 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
     // navigate('/project/2');
   };
 
+  const handlePreviousImage = (event: any) => {
+    console.log('Previous image');
+  };
+
+  const handleNextImage = (event: any) => {
+    console.log('Next image');
+    //TODO: handle next image handle
+  };
 
   return (
     <div
@@ -73,24 +83,35 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
     >
       <div ref={navRef} className={`overlay ${toggle ? 'overlay' : 'close'}`}>
         <div className="main-break-line"></div>
-        <div className="overlay-content">
+        <div className="project-content">
           <div className="vertical-word">
             {/* Todo: change the project name by passing the project name */}
+            <button onClick={handlePreviousImage}>
+              <HiArrowNarrowUp></HiArrowNarrowUp>{' '}
+            </button>
+
             <a>Project Name</a>
+            <button onClick={handleNextImage}>
+              {' '}
+              <HiArrowNarrowDown></HiArrowNarrowDown>{' '}
+            </button>
+
             <br></br>
             <a>1 / 10</a>
           </div>
-          <div className="break-line"></div>
-          <div className="btn-action">
-            <a>View in fullscreen</a>
-          </div>
-          <div className="break-line"></div>
-          <div className="btn-action">
-            <a onClick={PreviousProject}>Previous project</a>
-          </div>
-          <div className="break-line"></div>
-          <div className="btn-action">
-            <a onClick={nextProject}>Next project</a>
+          <div>
+            <div className="break-line"></div>
+            <div className="btn-action">
+              <a>View in fullscreen</a>
+            </div>
+            <div className="break-line"></div>
+            <div className="btn-action">
+              <a onClick={PreviousProject}>Previous project</a>
+            </div>
+            <div className="break-line"></div>
+            <div className="btn-action">
+              <a onClick={nextProject}>Next project</a>
+            </div>
           </div>
         </div>
       </div>
