@@ -14,7 +14,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color:#181A19;
+  background-color: #181a19;
   overflow-x: hidden;
   display: block;
 }
@@ -105,9 +105,25 @@
   z-index: 5;
 }
 
-button{
+button {
   margin: 5px 0;
   background: transparent;
-  color: #7A7F7D;
+  color: #7a7f7d;
   font-size: 22px;
 }
+
+.main-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 90vh;
+  margin-right: 28px;
+  margin-left: 28px;
+}
+
+.right-arrow,.left-arrow{
+  font-size: 50px;
+  cursor: pointer;
+}
+

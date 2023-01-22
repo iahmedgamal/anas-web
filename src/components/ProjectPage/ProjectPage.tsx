@@ -9,6 +9,8 @@ import 'aos/dist/aos.css';
 import { useNavigate } from 'react-router-dom';
 import { HiArrowNarrowUp } from 'react-icons/hi';
 import { HiArrowNarrowDown } from 'react-icons/hi';
+import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowLeft } from 'react-icons/bs';
 interface MainNavigationProps {
   name: boolean;
   projectIndex?: number;
@@ -83,6 +85,10 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
     }
   };
 
+  const closeNavigation = () => {
+          setToggle(false);
+
+  }
   return (
     <div
       data-aos="slide-up"
@@ -99,6 +105,20 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
         backgroundPosition: 'center',
       }}
     >
+      <div className="main-buttons-container">
+      {  !toggle &&<div className="left-arrow" onClick={handlePreviousImage}>
+          <BsArrowLeft></BsArrowLeft>
+        </div>}
+        {!toggle && <div>
+    
+          {currentIndex + 1} / {project.gallery.length}
+        </div>}
+
+        {!toggle && <div className="right-arrow" onClick={handleNextImage}>
+          <BsArrowRight></BsArrowRight>
+        </div>}
+      </div>
+
       <div ref={navRef} className={`overlay ${toggle ? 'overlay' : 'close'}`}>
         <div className="main-break-line"></div>
         <div className="project-content">
@@ -121,7 +141,7 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
           <div>
             <div className="break-line"></div>
             <div className="btn-action">
-              <a>View in fullscreen</a>
+              <a onClick={closeNavigation}>View in fullscreen</a>
             </div>
             <div className="break-line"></div>
             <div className="btn-action">
