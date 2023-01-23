@@ -2,6 +2,7 @@ import React, { Component, useEffect, useRef, useState } from 'react';
 import './MainNavigation.css';
 import MenuLogo from '../../assets/menu.svg';
 import { Project } from '../models/Project';
+import { Projects } from '../models/Projects';
 
 // importing aos
 import AOS from 'aos';
@@ -9,54 +10,11 @@ import 'aos/dist/aos.css';
 interface MainNavigationProps {
   name: boolean;
   projectIndex?: number;
-  handleClick: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
-export const MainNavigation: React.FC<MainNavigationProps> = ({
-  name,
-  handleClick,
-}) => {
+export const MainNavigation: React.FC<MainNavigationProps> = ({ name }) => {
   const navRef = useRef<HTMLInputElement>(null);
   const [toggle, setToggle] = useState(false);
-
-  const projects: Project[] = [
-    {
-      name: 'Portraits',
-      id: 1,
-      time: '2019',
-      description: 'test portrait',
-    },
-    {
-      name: 'Halayeb',
-      id: 2,
-      time: '2019',
-      description: 'test portrait',
-    },
-    {
-      name: 'Frankfurt',
-      id: 3,
-      time: '2019',
-      description: 'test portrait',
-    },
-    {
-      name: 'Singles',
-      id: 4,
-      time: '2019',
-      description: 'test portrait',
-    },
-    {
-      name: 'COVID',
-      id: 5,
-      time: '2019',
-      description: 'test portrait',
-    },
-    {
-      name: 'Yemen',
-      id: 6,
-      time: '2019',
-      description: 'test portrait',
-    },
-  ];
 
   useEffect(() => {
     AOS.init();
@@ -80,14 +38,10 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({
   };
 
   const renderProjects = () => {
-    return projects.map((project) => {
+    return Projects.map((project) => {
       return (
         <div className="vertical" key={project.id}>
-          <a
-            href={`#${project.name}`}
-            onClick={handleClick}
-            id={String(project.id)}
-          >
+          <a href={`#${project.name}`} id={String(project.id)}>
             {project.name}
           </a>
         </div>

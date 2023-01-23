@@ -3,4 +3,5 @@ export interface Project {
   id: number;
   time: string;
   description: string;
+  url: string;
 }

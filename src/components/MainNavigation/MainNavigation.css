@@ -11,10 +11,10 @@
   overflow: hidden;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
-  background-color: rgba(33, 33, 33, 0.500);
+  background-color: rgba(33, 33, 33, 0.5);
   overflow-x: hidden;
   display: block;
 }
@@ -38,7 +38,7 @@
   margin-left: 15px;
   font-family: 'Poppins-Regular';
   transform: rotate(0.5turn);
-  font-style: normal; 
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;

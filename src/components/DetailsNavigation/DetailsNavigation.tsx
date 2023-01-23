@@ -1,4 +1,4 @@
-import React, {  useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Project } from '../models/Project';
 import './DetailsNavigation.css';
 // importing aos
@@ -23,11 +23,10 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
     AOS.init();
   }, []);
 
- 
-  
-    const closeHandler = () => {
-      setToggleDetails(false);
-    };
+  const closeHandler = () => {
+    setToggleDetails(false);
+  };
+
   return (
     <div>
       {toggle && (
