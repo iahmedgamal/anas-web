@@ -117,7 +117,7 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  height: 90vh;
+  height: 100vh;
   margin-right: 28px;
   margin-left: 28px;
 }
@@ -125,5 +125,14 @@ button {
 .right-arrow,.left-arrow{
   font-size: 50px;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
+.project-index{
+    margin-bottom: 30px;
+
+}
+
+a{
+  cursor: pointer;
+}

@@ -44,7 +44,7 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
 
   const moreHandler = () => {
     setToggleDetails(!toggle);
-    navigate('/project/1');
+    navigate(`/project/${project.id}`, { state: { projectData: project } });
   };
 
   return (

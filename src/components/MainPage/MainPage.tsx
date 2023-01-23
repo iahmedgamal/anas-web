@@ -7,7 +7,12 @@ import { DiscoverButton } from '../DiscoverButton/DiscoverButton';
 import { Projects } from '../models/Projects';
 import { Sections } from '../Sections/Sections';
 
-const MainPage: React.FC = () => {
+interface MainProps {
+  discoverHandler: React.MouseEventHandler<HTMLButtonElement>;
+  id: string
+}
+
+export const MainPage = ({ id }: MainProps) => {
   const [currentSection, setCurrentSection] = useState(1);
   const [mainNavigation, setMainNavigation] = useState(false);
   const [showText, setShowText] = useState(true);
@@ -43,13 +48,12 @@ const MainPage: React.FC = () => {
   // Render the currently displayed section based on the state
   let displayedSection;
 
-
-    const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
-      const target = event.target as HTMLButtonElement;
-      const id = Number(target.id);
-      setCurrentProject(Projects[id]);
-      setToggleDetails(!toggleDetails);
-    };
+  const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const target = event.target as HTMLButtonElement;
+    const id = Number(target.id);
+    setCurrentProject(Projects[id]);
+    setToggleDetails(!toggleDetails);
+  };
 
   return (
     <div className="app" onWheel={handleScroll}>
@@ -61,10 +65,8 @@ const MainPage: React.FC = () => {
       ></DetailsNavigation>
       {displayedSection}
       {showText && <ScrollDiscover />}
-      {!showText && <DiscoverButton handleClick={discoverHandler} id={''} />}
+      {!showText && <DiscoverButton handleClick={discoverHandler} id={id} />}
       <Sections projects={Projects} handleDiscover={discoverHandler} />
     </div>
   );
 };
-
-export default MainPage;

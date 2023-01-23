@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useRef, useState } from 'react';
 import './ProjectPage.css';
 import MenuLogo from '../../assets/menu.svg';
-import { Project } from '../models/Project';
 
 // importing aos
 import AOS from 'aos';
@@ -11,11 +10,13 @@ import { HiArrowNarrowUp } from 'react-icons/hi';
 import { HiArrowNarrowDown } from 'react-icons/hi';
 import { BsArrowRight } from 'react-icons/bs';
 import { BsArrowLeft } from 'react-icons/bs';
+import { useParams } from 'react-router-dom';
+import { Projects } from '../models/Projects';
+
 interface MainNavigationProps {
   name: boolean;
   projectIndex?: number;
   handleClick: React.MouseEventHandler<HTMLAnchorElement>;
-  // project:Project
 }
 
 export const ProjectPage: React.FC<MainNavigationProps> = ({
@@ -27,16 +28,20 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
   const navigate = useNavigate();
   let [currentIndex, setCurrentIndex] = useState(0);
 
-  const project: Project = {
-    name: 'Portraits',
-    id: 1,
-    time: '2019',
-    description: 'test portrait',
-    gallery: [
-      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/D85_1193-2%201.png?alt=media&token=e2eece33-28a1-4f79-ace4-290d1fe8449e',
-      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/WhatsApp%20Image%202022-12-27%20at%2012.55.35.jpeg?alt=media&token=33fb159a-4d87-44bc-9c16-88897f151cb9',
-    ],
-  };
+  let [project, setProject] = useState(Projects[0]);
+
+ 
+  const params = useParams();
+  const id:any = params.id;
+
+
+  useEffect(() => {
+    if (id) {
+        setProject(Projects[id]);
+
+    }
+    }, [id]);
+
 
   useEffect(() => {
     AOS.init();
@@ -52,7 +57,6 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
 
   const toggleNav = (event: React.MouseEvent<HTMLButtonElement>) => {
     setToggle(!toggle);
-    console.log('toggle', toggle);
     if (navRef.current) {
       navRef.current.style.width = '100px';
       navRef.current.style.borderRight = '1px solid #ffffffb4';
@@ -60,15 +64,12 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
   };
 
   const nextProject = (event: any) => {
-    console.log('next project');
-    //TODO: change the project id by passing the project id and increment it
-    // navigate('/project/2');
+    if (project.id < Projects.length-1)
+      navigate(`/project/${project.id + 1}`);
   };
 
   const PreviousProject = (event: any) => {
-    console.log('Previous project');
-    //TODO: change the project id by passing the project id and decrement it
-    // navigate('/project/2');
+    if (project.id > 0) navigate(`/project/${project.id - 1}`);
   };
 
   const handlePreviousImage = (event: any) => {
@@ -106,17 +107,22 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
       }}
     >
       <div className="main-buttons-container">
-      {  !toggle &&<div className="left-arrow" onClick={handlePreviousImage}>
-          <BsArrowLeft></BsArrowLeft>
-        </div>}
-        {!toggle && <div>
-    
-          {currentIndex + 1} / {project.gallery.length}
-        </div>}
+        {!toggle && (
+          <div className="left-arrow" onClick={handlePreviousImage}>
+            <BsArrowLeft></BsArrowLeft>
+          </div>
+        )}
+        {!toggle && (
+          <div>
+            {currentIndex + 1} / {project.gallery.length}
+          </div>
+        )}
 
-        {!toggle && <div className="right-arrow" onClick={handleNextImage}>
-          <BsArrowRight></BsArrowRight>
-        </div>}
+        {!toggle && (
+          <div className="right-arrow" onClick={handleNextImage}>
+            <BsArrowRight></BsArrowRight>
+          </div>
+        )}
       </div>
 
       <div ref={navRef} className={`overlay ${toggle ? 'overlay' : 'close'}`}>
@@ -134,7 +140,7 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
             </button>
 
             <br></br>
-            <a>
+            <a className="project-index">
               {currentIndex + 1} / {project.gallery.length}
             </a>
           </div>
