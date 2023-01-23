@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 interface MainNavigationProps {
   name: boolean;
   projectIndex?: number;
+  handleClick: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
 export const MainNavigation: React.FC<MainNavigationProps> = ({ name }) => {

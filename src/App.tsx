@@ -1,10 +1,13 @@
-import React from 'react';
 import './App.css';
 import React, { useState } from 'react';
 import { MainNavigation } from './components/MainNavigation/MainNavigation';
 import { DetailsNavigation } from './components/DetailsNavigation/DetailsNavigation';
 import { Sections } from './components/Sections/Sections';
 import { Projects } from './components/models/Projects';
+import { Route, Routes } from 'react-router-dom';
+import MainPage from './components/MainPage/MainPage';
+import { ProjectPage } from './components/ProjectPage/ProjectPage';
+import { NoMatch } from './components/NoMatch/NoMatch';
 
 const App: React.FC = () => {
   const [mainNavigation, setMainNavigation] = useState(false);
