@@ -4,4 +4,5 @@ export interface Project {
   time: string;
   description: string;
   gallery: string [];
+  url: string;
 }

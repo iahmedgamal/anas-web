@@ -1,5 +1,5 @@
 .discoverBtn {
-  position: fixed;
+  position: absolute;
   bottom: 5%;
   right: 5%;
   width: 180px;
