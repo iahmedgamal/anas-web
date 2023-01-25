@@ -7,6 +7,8 @@ type Props = {
 };
 
 export const DiscoverButton = ({ handleClick, id }: Props) => {
+
+  ;
   return (
     <div>
       <button onClick={handleClick} className="discoverBtn" id={id}>

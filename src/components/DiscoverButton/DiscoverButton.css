@@ -18,3 +18,15 @@
 .arrow {
   margin-right: 8px;
 }
+
+@media (max-width: 767px) {
+  .discoverBtn {
+    width: 113px;
+    height: 40px;
+    font-size: 18px;
+    right: 2%;
+  }
+  .arrow {
+    width: 20px;
+  }
+}

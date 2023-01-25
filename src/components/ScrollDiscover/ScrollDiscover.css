@@ -14,6 +14,7 @@
   animation: text 2s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+  pointer-events: none;
 }
 
 @keyframes text {

@@ -5,6 +5,7 @@ import './DetailsNavigation.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Back from '../../assets/back.svg';
+import { useNavigate } from 'react-router-dom';
 
 interface DetailsNavigationProps {
   project: Project;
@@ -18,13 +19,32 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
   setToggleDetails,
 }) => {
   const navRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init();
   }, []);
 
+  useEffect(() => {
+    function handleClickOutside(event: any) {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        closeHandler();
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   const closeHandler = () => {
     setToggleDetails(false);
+  };
+
+  const moreHandler = () => {
+    setToggleDetails(!toggle);
+    navigate(`/project/${project.id}`, { state: { projectData: project } });
   };
 
   return (
@@ -54,7 +74,9 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
                   />
                   Back
                 </button>
-                <button className="more-btn">More</button>
+                <button className="more-btn" onClick={moreHandler}>
+                  More
+                </button>
               </div>
             </div>
           </div>
@@ -63,3 +85,6 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
     </div>
   );
 };
+function componentDidMount() {
+  throw new Error('Function not implemented.');
+}

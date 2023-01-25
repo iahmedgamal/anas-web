@@ -13,7 +13,7 @@
 
 .details-content {
   font-family: 'Poppins-Regular';
-  margin-left: 90px;
+  margin-left: 80px;
   margin-top: 200px;
   display: flex;
   flex-direction: column;
@@ -88,4 +88,88 @@
   line-height: 140%;
   color: #ffffff;
   margin-top: 16px;
+}
+
+@media (max-width: 767px) {
+  .details-navigation {
+    width: 63%;
+    height: 100%;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background-color: #181a19;
+    overflow-x: hidden;
+    display: block;
+    padding: 10px;
+  }
+  .details-content {
+    margin-left: 23px;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+  }
+  .back-btn {
+    font-size: 20px;
+    color: white;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    flex-direction: column;
+    font-family: 'Canela Regular';
+  }
+  .back-icon {
+    margin: 8px;
+  }
+  .more-btn {
+    font-family: 'Canela Regular';
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 24px;
+    color: black;
+    background-color: white;
+    border-radius: 70%;
+    width: 90px;
+    height: 44px;
+    margin: 0px 1px 10px 0px;
+  }
+  .divider {
+    width: 100%;
+    border-top: 1px solid #333;
+    margin-top: 35px;
+  }
+  .details-time {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #f3ebdc;
+  }
+  .details-title {
+    font-family: 'Canela';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    font-size: 5vw;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 40px;
+  }
+  .details-description {
+    white-space: pre-line;
+    font-family: 'Poppins-Light';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-top: 16px;
+  }
+  .buttons {
+    margin-top: 15px;
+  }
 }
