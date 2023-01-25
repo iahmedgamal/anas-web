@@ -122,17 +122,17 @@ button {
   margin-left: 28px;
 }
 
-.right-arrow,.left-arrow{
+.right-arrow,
+.left-arrow {
   font-size: 50px;
   cursor: pointer;
   margin-bottom: 30px;
 }
 
-.project-index{
-    margin-bottom: 30px;
-
+a {
+  cursor: pointer;
 }
 
-a{
-  cursor: pointer;
+.gallery-length {
+  margin-bottom: 45px;
 }

@@ -30,18 +30,14 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
 
   let [project, setProject] = useState(Projects[0]);
 
- 
   const params = useParams();
-  const id:any = params.id;
-
+  const id: any = params.id;
 
   useEffect(() => {
     if (id) {
-        setProject(Projects[id]);
-
+      setProject(Projects[id]);
     }
-    }, [id]);
-
+  }, [id]);
 
   useEffect(() => {
     AOS.init();
@@ -64,7 +60,7 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
   };
 
   const nextProject = (event: any) => {
-    if (project.id < Projects.length-1)
+    if (project.id < Projects.length - 1)
       navigate(`/project/${project.id + 1}`);
   };
 
@@ -87,23 +83,21 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
   };
 
   const closeNavigation = () => {
-          setToggle(false);
-
-  }
+    setToggle(false);
+  };
   return (
     <div
       data-aos="slide-up"
       data-aos-anchor-placement="top-center"
       data-aos-duration="600"
       style={{
-        //TODO: change the background image by passing the project image
         backgroundImage: `url(${project.gallery[currentIndex]})`,
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
         height: '100%',
         width: '100%',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center  center',
       }}
     >
       <div className="main-buttons-container">
@@ -113,7 +107,7 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
           </div>
         )}
         {!toggle && (
-          <div>
+          <div className="gallery-length">
             {currentIndex + 1} / {project.gallery.length}
           </div>
         )}
