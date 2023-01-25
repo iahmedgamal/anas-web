@@ -13,14 +13,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 html,
 body {
   overflow: hidden;
-}
-
-body {
+  overflow: -moz-scrollbars-none;
   margin: 0;
   background-color: black;
 }
