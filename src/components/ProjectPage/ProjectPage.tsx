@@ -32,23 +32,23 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
 
   const params = useParams();
   const id: any = params.id;
-const [startX, setStartX] = useState(0);
-const [endX, setEndX] = useState(0);
+  const [startX, setStartX] = useState(0);
+  const [endX, setEndX] = useState(0);
 
-const handleTouchStart = (event: any) => {
-  setStartX(event.touches[0].clientX);
-};
+  const handleTouchStart = (event: any) => {
+    setStartX(event.touches[0].clientX);
+  };
 
-const handleTouchEnd = (event: any) => {
-  setEndX(event.changedTouches[0].clientX);
+  const handleTouchEnd = (event: any) => {
+    setEndX(event.changedTouches[0].clientX);
 
-  const swipeLength = endX - startX;
-  if (swipeLength > 50) {
-    handlePreviousImage();
-  } else if (swipeLength < -50) {
-    handleNextImage();
-  }
-};
+    const swipeLength = endX - startX;
+    if (swipeLength > 50) {
+      handlePreviousImage();
+    } else if (swipeLength < -50) {
+      handleNextImage();
+    }
+  };
   useEffect(() => {
     if (id) {
       setProject(Projects[id]);
