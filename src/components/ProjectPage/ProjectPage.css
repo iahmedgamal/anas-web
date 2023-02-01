@@ -1,3 +1,8 @@
+div{
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
 .projectNavImg {
   position: fixed;
   z-index: 5;
@@ -26,11 +31,10 @@
 .project-content {
   display: flex;
   flex-direction: column;
-
   justify-content: space-evenly;
   text-align: center;
   flex: 1;
-  height: 100%;
+  height: 85%;
 }
 
 .vertical-word {
@@ -135,4 +139,31 @@ a {
 
 .gallery-length {
   margin-bottom: 45px;
+}
+
+@media (max-width: 768px) {
+
+
+.vertical-word {
+  font-size: 12px;
+}
+.btn-action {
+    margin: 5px;
+  }
+}
+
+
+@media (orientation: landscape) {
+
+  .vertical-word {
+  display: none;    
+}
+
+.project-content {
+    height: 75%;
+}
+.first-break{
+  display: none;
+}
+
 }
