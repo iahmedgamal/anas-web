@@ -13,11 +13,12 @@
 
 .details-content {
   font-family: 'Poppins-Regular';
-  margin-left: 80px;
+  margin-left: 60px;
   margin-top: 200px;
   display: flex;
   flex-direction: column;
   height: 70vh;
+  padding: 20px;
 }
 
 .buttons {
@@ -74,7 +75,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 90px;
-  font-size: 5vw;
+  font-size: 4.5vw;
   text-transform: uppercase;
   color: #ffffff;
   margin-top: 40px;
