@@ -32,7 +32,23 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
 
   const params = useParams();
   const id: any = params.id;
+  const [startX, setStartX] = useState(0);
+  const [endX, setEndX] = useState(0);
 
+  const handleTouchStart = (event: any) => {
+    setStartX(event.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (event: any) => {
+    setEndX(event.changedTouches[0].clientX);
+
+    const swipeLength = endX - startX;
+    if (swipeLength > 50) {
+      handlePreviousImage();
+    } else if (swipeLength < -50) {
+      handleNextImage();
+    }
+  };
   useEffect(() => {
     if (id) {
       setProject(Projects[id]);
@@ -68,14 +84,14 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
     if (project.id > 0) navigate(`/project/${project.id - 1}`);
   };
 
-  const handlePreviousImage = (event: any) => {
+  const handlePreviousImage = (event?: any) => {
     setCurrentIndex(currentIndex - 1);
     if (currentIndex <= 0) {
       setCurrentIndex(project.gallery.length - 1);
     }
   };
 
-  const handleNextImage = (event: any) => {
+  const handleNextImage = (event?: any) => {
     setCurrentIndex(currentIndex + 1);
     if (currentIndex == project.gallery.length - 1) {
       setCurrentIndex(0);
@@ -90,6 +106,8 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
       data-aos="slide-up"
       data-aos-anchor-placement="top-center"
       data-aos-duration="600"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
       style={{
         backgroundImage: `url(${project.gallery[currentIndex]})`,
         backgroundRepeat: 'no-repeat',
@@ -139,7 +157,7 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
             </a>
           </div>
           <div>
-            <div className="break-line"></div>
+            <div className="break-line first-break"></div>
             <div className="btn-action">
               <a onClick={closeNavigation}>View in fullscreen</a>
             </div>
