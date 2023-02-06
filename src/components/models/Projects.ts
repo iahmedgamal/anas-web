@@ -31,13 +31,12 @@ export const Projects: Project[] = [
     ],
   },
   {
-    name: 'Forgotten Triangle',
+    name: 'Forgotten Triangles',
     id: 2,
     time: 'January, 2022',
-    description: '',
+    description: 'test',
     url: 'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/forgotten%20triangle%2F3.jpg?alt=media&token=a15a252e-a5eb-4600-af90-32eef915a9e5',
     gallery: [
-      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/forgotten%20triangle%2F1%20(1).jpg?alt=media&token=ed9f4856-a4c8-4c81-bf60-6289af2201af',
       'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/forgotten%20triangle%2F12.jpg?alt=media&token=e9aad24c-0086-42d9-beaa-27f2b562de0c',
       'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/forgotten%20triangle%2F13.jpg?alt=media&token=def996b3-ce29-42ad-a05b-26111c2017f1',
       'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/forgotten%20triangle%2F6.1.jpg?alt=media&token=caee5df2-e44c-4f8c-8cfa-29659e1b1c29',
@@ -74,18 +73,19 @@ export const Projects: Project[] = [
     ],
   },
 
-  {
-    name: 'They Move On Tracks Of Never-Ending Light',
-    id: 5,
-    time: 'January, 2021',
-    description: ' description description',
-    url: 'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F1.jpg?alt=media&token=693c2705-d3c3-4921-a8c8-005fdb03e073',
-    gallery: [
-      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F3(3).jpg?alt=media&token=dfa2675f-7d63-4ed0-8668-381907648134',
-      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F2%20(1).jpg?alt=media&token=41e95e71-0be6-40f0-a97f-a161b5d3c7ee',
-      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F3(5).jpg?alt=media&token=bf4f5540-3536-46dc-a320-76ed9bffe9c6',
-      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F2(2).jpg?alt=media&token=203ea8fd-0d90-40b4-a08d-72e0a3204605',
-      'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F3(2).jpg?alt=media&token=16879fc5-d818-40a7-9b50-70b0e8e2f967',
-    ],
-  },
+  // {
+  //   name: 'They Move On Tracks Of Never-Ending Light',
+  //   id: 5,
+  //   time: 'January, 2021',
+  //   description: ' description description',
+  //   url: 'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F1.jpg?alt=media&token=693c2705-d3c3-4921-a8c8-005fdb03e073',
+  //   gallery: [
+  //     'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F3(3).jpg?alt=media&token=dfa2675f-7d63-4ed0-8668-381907648134',
+  //     'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F2%20(1).jpg?alt=media&token=41e95e71-0be6-40f0-a97f-a161b5d3c7ee',
+  //     'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F3(5).jpg?alt=media&token=bf4f5540-3536-46dc-a320-76ed9bffe9c6',
+  //     'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F2(2).jpg?alt=media&token=203ea8fd-0d90-40b4-a08d-72e0a3204605',
+  //     'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F3(2).jpg?alt=media&token=16879fc5-d818-40a7-9b50-70b0e8e2f967',
+  //   ],
+  // }
+
 ];

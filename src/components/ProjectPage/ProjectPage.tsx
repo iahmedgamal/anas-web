@@ -76,12 +76,18 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
   };
 
   const nextProject = (event: any) => {
-    if (project.id < Projects.length - 1)
+    if (project.id < Projects.length - 1) {
+      setCurrentIndex(0);
+      setProject(Projects[project.id + 1])
       navigate(`/project/${project.id + 1}`);
+    }
   };
 
   const PreviousProject = (event: any) => {
-    if (project.id > 0) navigate(`/project/${project.id - 1}`);
+    if (project.id > 0) {
+      setCurrentIndex(0);
+      navigate(`/project/${project.id - 1}`);
+    }
   };
 
   const handlePreviousImage = (event?: any) => {
