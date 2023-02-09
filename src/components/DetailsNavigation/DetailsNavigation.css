@@ -93,7 +93,11 @@
   margin-top: 16px;
 }
 
-@media (max-width: 767px) {
+
+
+@media (max-width: 767px)
+
+{
   .details-navigation {
     width: 63%;
     height: 100%;
@@ -107,11 +111,11 @@
     padding: 10px;
   }
   .details-content {
-    margin-left: 23px;
-    margin-top: 90px;
+    margin-left: 0px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    height: 90vh;
   }
   .back-btn {
     font-size: 20px;
@@ -158,7 +162,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 90px;
-    font-size: 5vw;
+    font-size: 4vw;
     text-transform: uppercase;
     color: #ffffff;
     margin-top: 40px;
@@ -167,7 +171,7 @@
     white-space: pre-line;
     font-family: 'Poppins-Light';
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 140%;
     color: #ffffff;
     margin-top: 16px;
@@ -176,3 +180,4 @@
     margin-top: 15px;
   }
 }
+

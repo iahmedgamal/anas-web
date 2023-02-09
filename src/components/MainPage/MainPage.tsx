@@ -22,11 +22,11 @@ export const MainPage = ({ id }: MainProps) => {
   // Method to handle scroll events and switch between sections
   const handleScroll = (event: { deltaY: number }) => {
     setMainNavigation(true);
+      setShowText(false);
 
     // Check if the user is scrolling up or down
     if (event.deltaY > 0) {
       // Scrolling down, switch to the next section or the first section if on the last one
-      setShowText(false);
       if (currentSection < 6) {
         setCurrentSection(currentSection + 1);
       } else {
@@ -44,6 +44,7 @@ export const MainPage = ({ id }: MainProps) => {
 
   const navigationClick = (e: any) => {
     console.log('navigationClick');
+    setShowText(false);
     setCurrentSection(Number(e.target.id));
   };
   // Render the currently displayed section based on the state
@@ -51,12 +52,13 @@ export const MainPage = ({ id }: MainProps) => {
 
   const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
     console.log("discoer clicked")
-     setShowText(false);
 
     const target = event.target as HTMLButtonElement;
     const id = Number(target.id);
     setCurrentProject(Projects[id]);
     setToggleDetails(!toggleDetails);
+    setShowText(false);
+
   };
 
   return (
@@ -64,7 +66,7 @@ export const MainPage = ({ id }: MainProps) => {
       <MainNavigation
         name={mainNavigation}
         handleClick={navigationClick}
-        setShowTex ={setShowText}
+        setShowTex={setShowText}
       />
       <DetailsNavigation
         toggle={toggleDetails}
@@ -73,8 +75,12 @@ export const MainPage = ({ id }: MainProps) => {
       ></DetailsNavigation>
       {displayedSection}
       {showText && <ScrollDiscover />}
-      {showText && <DiscoverButton handleClick={discoverHandler} id={id} />}
-      <Sections projects={Projects} handleDiscover={discoverHandler} />
+      {!showText && <DiscoverButton handleClick={discoverHandler} id={id} />}
+      <Sections
+        setShowTex={setShowText}
+        projects={Projects}
+        handleDiscover={discoverHandler}
+      />
     </div>
   );
 };

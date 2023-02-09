@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useRef, useState } from 'react';
 import './MainNavigation.css';
 import MenuLogo from '../../assets/menu.svg';
-import { Project } from '../models/Project';
 import { Projects } from '../models/Projects';
 
 // importing aos
@@ -28,7 +27,6 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({
   useEffect(() => {
     if (navRef.current && name) {
       setShowTex(false);
-
       setToggle(true);
       navRef.current.style.width = '64px';
       navRef.current.style.borderRight = '1px solid #ffffffb4';
