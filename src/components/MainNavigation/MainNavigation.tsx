@@ -1,7 +1,6 @@
-import React, { Component, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './MainNavigation.css';
 import MenuLogo from '../../assets/menu.svg';
-import { Project } from '../models/Project';
 import { Projects } from '../models/Projects';
 
 // importing aos
@@ -10,7 +9,6 @@ import 'aos/dist/aos.css';
 interface MainNavigationProps {
   name: boolean;
   projectIndex?: number;
-  handleClick: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
 export const MainNavigation: React.FC<MainNavigationProps> = ({ name }) => {
@@ -51,8 +49,8 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({ name }) => {
   };
 
   return (
-    <div>
-      <div ref={navRef} className={`overlay ${toggle ? 'overlay' : 'close'}`}>
+    <div className="nav-container">
+      <div ref={navRef} className={`${toggle ? 'overlay' : 'close'}`}>
         <div className="vertical-line"></div>
         <div className="overlay-content">{renderProjects()}</div>
       </div>

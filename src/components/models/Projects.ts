@@ -21,7 +21,7 @@ export const Projects: Project[] = [
     id: 1,
     time: 'January, 2020',
     description:
-      'This decryption speaks to the idea that a photograph captures a specific moment in time and space, creating a unique monument to that moment. The particularities of the scene, such as the birds, sea, and fishermen, create a specific image that is different from others interpretations, but the photograph provides tangible proof that this specific moment in time and space existed. The photograph serves as a witness to the light that was present in that moment, serving as a reminder that the prese',
+      'This decryption speaks to the idea that a photograph captures a specific moment in time and space, creating a unique monument to that moment. The particularities of the scene, such as the birds, sea, and fishermen, create a specific image that is different from others interpretations, but the photograph provides tangible proof that this specific moment in time and space existed. The photograph serves as a witness to the light that was present in that moment, serving as a reminder that the press',
     url: 'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/Al%20Janub%2F3.jpg?alt=media&token=c455801a-750f-457f-acd5-40a603104334',
     gallery: [
       'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/Al%20Janub%2F1.jpg?alt=media&token=8b04efed-d1bd-4f2f-85c7-8a4923c0c497',
@@ -87,5 +87,4 @@ export const Projects: Project[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F3(2).jpg?alt=media&token=16879fc5-d818-40a7-9b50-70b0e8e2f967',
   //   ],
   // }
-
 ];

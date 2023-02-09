@@ -17,7 +17,7 @@ const App: React.FC = () => {
   const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
     const target = event.target as HTMLButtonElement;
     const targetId = Number(target.id);
-    setId(id.toString())
+    setId(id.toString());
     setCurrentProject(Projects[targetId]);
     setToggleDetails(!toggleDetails);
   };
@@ -33,7 +33,6 @@ const App: React.FC = () => {
           path="/project/:id"
           element={
             <ProjectPage
-        
               name={false}
               handleClick={function (
                 event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
