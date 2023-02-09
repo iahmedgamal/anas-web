@@ -1,0 +1,152 @@
+.about-navigation {
+  height: 100%;
+  overflow: hidden;
+  width: 50%;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: #181a19;
+  overflow-x: hidden;
+  display: block;
+  overflow: scroll;
+}
+
+.about-content {
+  font-family: 'Poppins-Regular';
+  margin-left: 100px;
+  margin-right: 30px;
+  margin-top: 18px;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  padding: 10px;
+  align-items: center;
+}
+
+section {
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.081);
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 0px;
+}
+
+.connect-title {
+  font-family: 'Canela';
+  font-family: 'Canela Regular';
+  font-size: 27px;
+}
+
+.about-title {
+  font-family: 'Canela';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 90px;
+  font-size: 90px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.about-description {
+  white-space: pre-line;
+  font-family: 'Poppins-Light';
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 140%;
+  color: #ffffff;
+  margin-top: 16px;
+}
+
+.about-divider {
+  width: 80%;
+  border-top: 1px solid #ffffff42;
+  margin-top: 11px;
+}
+.instagram {
+  font-family: 'Poppins-Regular';
+}
+
+.cta-buttons,
+about-title,
+close-btn {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+span {
+  color: #f5a623;
+}
+.text {
+  white-space: pre-line;
+}
+
+.title-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.close-btn {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .about-navigation {
+    width: 75%;
+  }
+  .details-navigation {
+    width: 63%;
+    height: 100%;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background-color: #181a19;
+    overflow-x: hidden;
+    display: block;
+    padding: 10px;
+  }
+  .about-content {
+    margin-left: 5px;
+    margin-top: 60px;
+    display: flex;
+    font-size: 15px;
+    flex-direction: column;
+    height: 80vh;
+    padding: 4px;
+  }
+
+  .connect-title {
+    font-size: 20px;
+  }
+
+  section {
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.081);
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 1px;
+  }
+  .about-title {
+    font-size: 20px;
+  }
+  .about-description {
+    font-size: 15px;
+  }
+}

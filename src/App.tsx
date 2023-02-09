@@ -27,7 +27,7 @@ const App: React.FC = () => {
       <Routes>
         <Route
           path="/"
-          element={<MainPage discoverHandler={discoverHandler} id={id} />}
+          element={<MainPage discoverHandler={discoverHandler} id={id}  />}
         />
         <Route
           path="/project/:id"

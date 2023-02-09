@@ -75,14 +75,14 @@
 
   .overlay-content {
     display: contents;
-    margin-top: 0px;
+  margin-top: 10px;
   }
 
   .vertical {
     font-size: 14px;
+        margin: 17px;
   }
 
-  .mainNavImg {
-    display: none;
-  }
+
 }
+
