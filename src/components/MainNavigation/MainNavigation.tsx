@@ -6,16 +6,19 @@ import { Projects } from '../models/Projects';
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 interface MainNavigationProps {
   name: boolean;
   projectIndex?: number;
   handleClick: React.MouseEventHandler<HTMLAnchorElement>;
   setShowTex: any;
+  handleAboutClick: any;
 }
 
 export const MainNavigation: React.FC<MainNavigationProps> = ({
   name,
   setShowTex,
+  handleAboutClick,
 }) => {
   const navRef = useRef<HTMLInputElement>(null);
   const [toggle, setToggle] = useState(false);
@@ -59,6 +62,13 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({
     <div>
       <div ref={navRef} className={`overlay ${toggle ? 'overlay' : 'close'}`}>
         <div className="vertical-line"></div>
+
+        <div className="overlay-content" onClick={handleAboutClick}>
+          <div className="vertical">
+            <a>About</a>
+          </div>
+        </div>
+
         <div className="overlay-content">{renderProjects()}</div>
       </div>
 
