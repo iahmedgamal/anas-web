@@ -21,7 +21,6 @@
   padding: 20px;
 }
 
-
 .buttons {
   display: flex;
   flex: 1;
@@ -183,3 +182,27 @@
   }
 }
 
+@media (max-width: 426px) {
+  .details-content {
+    margin: 50px 0px;
+  }
+
+  .details-description {
+    font-size: 16px;
+    margin: 0px;
+    padding: 15px;
+  }
+
+  .more-btn {
+    margin: 0px auto;
+  }
+
+  .back-btn {
+    margin: 0px auto;
+    visibility: visible;
+  }
+
+  .details-navigation {
+    width: 100%;
+  }
+}

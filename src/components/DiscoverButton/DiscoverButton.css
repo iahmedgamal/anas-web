@@ -30,3 +30,9 @@
     width: 20px;
   }
 }
+
+@media (max-width: 426px) {
+  .discoverBtn {
+    right: 7%;
+  }
+}

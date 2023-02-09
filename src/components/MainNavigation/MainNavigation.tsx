@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './MainNavigation.css';
 import MenuLogo from '../../assets/menu.svg';
 import { Projects } from '../models/Projects';
@@ -59,8 +59,8 @@ export const MainNavigation: React.FC<MainNavigationProps> = ({
   };
 
   return (
-    <div>
-      <div ref={navRef} className={`overlay ${toggle ? 'overlay' : 'close'}`}>
+    <div className="nav-container">
+      <div ref={navRef} className={`${toggle ? 'overlay' : 'close'}`}>
         <div className="vertical-line"></div>
 
         <div className="overlay-content" onClick={handleAboutClick}>

@@ -25,6 +25,7 @@
 
 .overlay-content {
   margin-top: 100px;
+  /* display: flex; */
 }
 .vertical-line {
   margin-top: 70px;
@@ -67,12 +68,21 @@
   z-index: 5;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 426px) {
+  .overlay {
+    height: 100vh;
+  }
+
+  .overlay-content {
+    display: contents;
+  margin-top: 10px;
+  }
+
   .vertical {
     font-size: 14px;
-    margin: 17px;
+        margin: 17px;
   }
-  .overlay-content {
-    margin-top: 10px;
-  }
+
+
 }
+
