@@ -57,6 +57,7 @@ export const DetailsNavigation: React.FC<DetailsNavigationProps> = ({
             data-aos="slide-right"
             data-aos-delay="100"
           >
+
             <div className="details-content">
               <div>
                 <div className="details-time">{project.time}</div>
