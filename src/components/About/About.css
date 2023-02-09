@@ -9,7 +9,7 @@
   background-color: #181a19;
   overflow-x: hidden;
   display: block;
-  overflow:scroll;
+  overflow: scroll;
 }
 
 .about-content {
@@ -71,25 +71,40 @@ section {
 .instagram {
   font-family: 'Poppins-Regular';
 }
-.cta-buttons, about-title{
+
+.cta-buttons,
+about-title,
+close-btn {
   cursor: pointer;
   text-align: center;
-      margin-top: 5px;
+  margin-top: 5px;
 }
-a{
+
+a {
   text-decoration: none;
   color: white;
 }
 
-span{
+span {
   color: #f5a623;
 }
-.text{
+.text {
   white-space: pre-line;
+}
 
+.title-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.close-btn {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
-  .about-navigation{
+  .about-navigation {
     width: 75%;
   }
   .details-navigation {
@@ -127,11 +142,11 @@ span{
     align-items: center;
     flex-direction: column;
     padding: 10px 1px;
-}
-.about-title{
-  font-size: 20px;
-}
-.about-description{
-  font-size: 15px;
-}
+  }
+  .about-title {
+    font-size: 20px;
+  }
+  .about-description {
+    font-size: 15px;
+  }
 }

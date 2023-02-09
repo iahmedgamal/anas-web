@@ -5,6 +5,7 @@ import './About.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link, useNavigate } from 'react-router-dom';
+import { IoMdClose } from 'react-icons/io';
 
 const ReadMore = ({ children }) => {
   const text = children;
@@ -68,14 +69,19 @@ export const About: React.FC<AboutProps> = ({ toggle, setToggleAbout }) => {
           >
             <div className="about-content">
               <div>
-                <a
-                  href="https://www.instagram.com/anas.brahem/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="about-title"
-                >
-                  Anas Ibrahem
-                </a>
+                <div className="title-close">
+                  <a
+                    href="https://www.instagram.com/anas.brahem/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="about-title"
+                  >
+                    Anas Ibrahem
+                  </a>
+                  <div className="close-btn" onClick={closeHandler}>
+                    <IoMdClose />
+                  </div>
+                </div>
                 <div className="divider" />
                 <div className="about-description">
                   <ReadMore
