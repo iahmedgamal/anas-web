@@ -15,6 +15,8 @@
   animation-delay: 1s;
   animation-fill-mode: forwards;
   pointer-events: none;
+  line-height: 24px;
+
 }
 
 @keyframes text {

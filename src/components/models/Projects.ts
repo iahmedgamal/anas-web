@@ -6,7 +6,7 @@ export const Projects: Project[] = [
     id: 0,
     time: 'May, 2021',
     description:
-      'A stunning visual journey that captures the essence of humanity in all its forms. From the grandeur of the theater, to the confident grace of a young woman, to the intimate moment of a couple holding their newborn, these five images are a testament to the beauty and wonder of life.',
+      'Five pictures show the beauty of life by capturing different aspects of humanity. These include the grand theater, a confident young woman, and a loving couple with their newborn. They create a stunning visual journey.',
     url: 'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/behind%20the%20stage%2Ftheater_tiny.jpg?alt=media&token=0e579e20-99eb-4451-bd0d-29cf42b1f378',
     gallery: [
       'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/behind%20the%20stage%2Fconfidence_tiny.jpg?alt=media&token=658ff7a2-1138-4a19-b74d-0b31030a37a0',
@@ -34,7 +34,7 @@ export const Projects: Project[] = [
     name: 'Forgotten Triangles',
     id: 2,
     time: 'January, 2022',
-    description: 'test',
+    description: '',
     url: 'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/forgotten%20triangle%2F3.jpg?alt=media&token=a15a252e-a5eb-4600-af90-32eef915a9e5',
     gallery: [
       'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/forgotten%20triangle%2F12.jpg?alt=media&token=e9aad24c-0086-42d9-beaa-27f2b562de0c',
@@ -87,5 +87,4 @@ export const Projects: Project[] = [
   //     'https://firebasestorage.googleapis.com/v0/b/anas-558b9.appspot.com/o/They%20Move%20On%20Tracks%20Of%20Never-Ending%20Light%2F3(2).jpg?alt=media&token=16879fc5-d818-40a7-9b50-70b0e8e2f967',
   //   ],
   // }
-
 ];

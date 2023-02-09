@@ -66,3 +66,13 @@
   cursor: pointer;
   z-index: 5;
 }
+
+@media (max-width: 768px) {
+  .vertical {
+    font-size: 14px;
+    margin: 17px;
+  }
+  .overlay-content {
+    margin-top: 10px;
+  }
+}

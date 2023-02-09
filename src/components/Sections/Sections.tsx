@@ -1,21 +1,17 @@
 import './Sections.css';
 import { Project } from '../models/Project';
 import { DiscoverButton } from '../DiscoverButton/DiscoverButton';
-import { ScrollDiscover } from '../ScrollDiscover/ScrollDiscover';
-import { useState } from 'react';
 
 type Props = {
   projects: Array<Project>;
   handleDiscover: React.MouseEventHandler<HTMLButtonElement>;
+  setShowTex: any;
 };
 
-export const Sections = ({ projects, handleDiscover }: Props) => {
-  const [show, setShow] = useState(true);
-
+export const Sections = ({ projects, handleDiscover, setShowTex }: Props) => {
   return (
     <>
-      {show && <ScrollDiscover />}
-      <div className="section" onScroll={() => setShow(false)}>
+      <div className="section" onScroll={() => setShowTex(false)}>
         {projects.map((project: Project) => {
           return (
             <div id={project.name} key={project.id}>
