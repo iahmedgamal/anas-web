@@ -43,12 +43,16 @@ export const MainPage = ({ id }: MainProps) => {
   };
 
   const navigationClick = (e: any) => {
+    console.log('navigationClick');
     setCurrentSection(Number(e.target.id));
   };
   // Render the currently displayed section based on the state
   let displayedSection;
 
   const discoverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+    console.log("discoer clicked")
+     setShowText(false);
+
     const target = event.target as HTMLButtonElement;
     const id = Number(target.id);
     setCurrentProject(Projects[id]);
@@ -57,7 +61,11 @@ export const MainPage = ({ id }: MainProps) => {
 
   return (
     <div className="app" onWheel={handleScroll}>
-      <MainNavigation name={mainNavigation} handleClick={navigationClick} />
+      <MainNavigation
+        name={mainNavigation}
+        handleClick={navigationClick}
+        setShowTex ={setShowText}
+      />
       <DetailsNavigation
         toggle={toggleDetails}
         setToggleDetails={setToggleDetails}
@@ -65,7 +73,7 @@ export const MainPage = ({ id }: MainProps) => {
       ></DetailsNavigation>
       {displayedSection}
       {showText && <ScrollDiscover />}
-      {!showText && <DiscoverButton handleClick={discoverHandler} id={id} />}
+      {showText && <DiscoverButton handleClick={discoverHandler} id={id} />}
       <Sections projects={Projects} handleDiscover={discoverHandler} />
     </div>
   );
