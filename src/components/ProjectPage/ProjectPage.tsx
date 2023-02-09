@@ -78,7 +78,7 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
   const nextProject = (event: any) => {
     if (project.id < Projects.length - 1) {
       setCurrentIndex(0);
-      setProject(Projects[project.id + 1])
+      setProject(Projects[project.id + 1]);
       navigate(`/project/${project.id + 1}`);
     }
   };
@@ -174,6 +174,10 @@ export const ProjectPage: React.FC<MainNavigationProps> = ({
             <div className="break-line"></div>
             <div className="btn-action">
               <a onClick={nextProject}>Next project</a>
+            </div>
+            <div className="break-line"></div>
+            <div className="btn-action">
+              <a href="/">Home</a>
             </div>
           </div>
         </div>
