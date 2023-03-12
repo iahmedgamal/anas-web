@@ -25,7 +25,11 @@
 
 .overlay-content {
   margin-top: 20px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .vertical-line {
   margin-top: 70px;
@@ -35,13 +39,13 @@
 .vertical {
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
-  margin: 40px;
-  margin-left: 15px;
+  /* margin: 40px; */
+  /* margin-left: 15px; */
   font-family: 'Poppins-Regular';
   transform: rotate(0.5turn);
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12.5px;
   line-height: 30px;
   color: #ffffff;
 }
@@ -75,14 +79,11 @@
 
   .overlay-content {
     display: contents;
-  margin-top: 10px;
+    margin-top: 10px;
   }
 
   .vertical {
     font-size: 14px;
-        margin: 17px;
+    margin: 17px;
   }
-
-
 }
-
