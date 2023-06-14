@@ -1,4 +1,4 @@
-# Anas Ibrehem - Website
+# Anas Ibrahem - Website
 
 
 ## built by Vite ⚡

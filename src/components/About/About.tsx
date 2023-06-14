@@ -70,14 +70,7 @@ export const About: React.FC<AboutProps> = ({ toggle, setToggleAbout }) => {
             <div className="about-content">
               <div>
                 <div className="title-close">
-                  <a
-                    href="https://www.instagram.com/anas.brahem/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="about-title"
-                  >
-                    Anas Ibrahem
-                  </a>
+                  <div className="about-title">Anas Ibrahem</div>
                   <div className="close-btn" onClick={closeHandler}>
                     <IoMdClose />
                   </div>
@@ -118,7 +111,7 @@ export const About: React.FC<AboutProps> = ({ toggle, setToggleAbout }) => {
               </div>
 
               <section>
-                <div className="connect-title"> Connect </div>
+                <div className="connect-title"> Contact </div>
                 <div className="about-divider" />
                 <div className="cta-buttons">
                   <a
