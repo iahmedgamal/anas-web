@@ -92,13 +92,9 @@
   margin-top: 16px;
 }
 
-
-
-@media (max-width: 767px)
-
-{
+@media (max-width: 767px) {
   .details-navigation {
-    width: 63%;
+    width: 100%;
     height: 100%;
     position: fixed;
     z-index: 4;
@@ -116,7 +112,6 @@
     flex-direction: column;
     height: 90vh;
     padding: 4px;
-
   }
   .back-btn {
     font-size: 20px;

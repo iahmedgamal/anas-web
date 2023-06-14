@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
 
-const ReadMore = ( {children} : any) => {
+const ReadMore = ({ children }: any) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
   const toggleReadMore = () => {
