@@ -7,7 +7,7 @@
 }
 
 .overlay {
-  height: 100%;
+  max-height: 100%;
   overflow: hidden;
   width: 0;
   position: fixed;
@@ -27,7 +27,7 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0.7em;
   justify-content: center;
   align-items: center;
 }
@@ -39,13 +39,11 @@
 .vertical {
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
-  /* margin: 40px; */
-  /* margin-left: 15px; */
   font-family: 'Poppins-Regular';
   transform: rotate(0.5turn);
   font-style: normal;
   font-weight: 400;
-  font-size: 12.5px;
+  font-size: 0.75em;
   line-height: 30px;
   color: #ffffff;
 }
@@ -70,20 +68,4 @@
 .humbugger-menu {
   cursor: pointer;
   z-index: 5;
-}
-
-@media screen and (max-width: 426px) {
-  .overlay {
-    height: 100vh;
-  }
-
-  .overlay-content {
-    display: contents;
-    margin-top: 10px;
-  }
-
-  .vertical {
-    font-size: 14px;
-    margin: 17px;
-  }
 }
